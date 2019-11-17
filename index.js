@@ -25,8 +25,8 @@ app.post('/compilecode' , function (req , res ) {
     if((lang === "C") || (lang === "C++"))
     {        
         if(inputRadio === "true")
-        {    
-        	var envData = { OS : "windows" , cmd : "g++"};	   	
+        {
+        	var envData = { OS : "linux" , cmd : "gcc"};	   	
         	compiler.compileCPPWithInput(envData , code ,input , function (data) {
         		if(data.error)
         		{
@@ -41,7 +41,7 @@ app.post('/compilecode' , function (req , res ) {
 	   else
 	   {
 	   	
-	   	var envData = { OS : "windows" , cmd : "g++"};	   
+	   	var envData = { OS : "linux" , cmd : "gcc"};	   
         	compiler.compileCPP(envData , code , function (data) {
         	if(data.error)
         	{
@@ -59,7 +59,7 @@ app.post('/compilecode' , function (req , res ) {
     {
         if(inputRadio === "true")
         {
-            var envData = { OS : "windows" };     
+            var envData = { OS : "linux" };     
             console.log(code);
             compiler.compileJavaWithInput( envData , code , function(data){
                 res.send(data);
@@ -67,7 +67,7 @@ app.post('/compilecode' , function (req , res ) {
         }
         else
         {
-            var envData = { OS : "windows" };     
+            var envData = { OS : "linux" };     
             console.log(code);
             compiler.compileJavaWithInput( envData , code , input ,  function(data){
                 res.send(data);
@@ -80,14 +80,14 @@ app.post('/compilecode' , function (req , res ) {
     {
         if(inputRadio === "true")
         {
-            var envData = { OS : "windows"};
+            var envData = { OS : "linux"};
             compiler.compilePythonWithInput(envData , code , input , function(data){
                 res.send(data);
             });            
         }
         else
         {
-            var envData = { OS : "windows"};
+            var envData = { OS : "linux"};
             compiler.compilePython(envData , code , function(data){
                 res.send(data);
             });
@@ -97,14 +97,14 @@ app.post('/compilecode' , function (req , res ) {
     {
         if(inputRadio === "true")
         {
-            var envData = { OS : "windows"};
+            var envData = { OS : "linux"};
             compiler.compileCSWithInput(envData , code , input , function(data){
                 res.send(data);
             });            
         }
         else
         {
-            var envData = { OS : "windows"};
+            var envData = { OS : "linux"};
             compiler.compileCS(envData , code , function(data){
                 res.send(data);
             });
@@ -115,14 +115,14 @@ app.post('/compilecode' , function (req , res ) {
     {
         if(inputRadio === "true")
         {
-            var envData = { OS : "windows"};
+            var envData = { OS : "linux"};
             compiler.compileVBWithInput(envData , code , input , function(data){
                 res.send(data);
             });            
         }
         else
         {
-            var envData = { OS : "windows"};
+            var envData = { OS : "linux"};
             compiler.compileVB(envData , code , function(data){
                 res.send(data);
             });
