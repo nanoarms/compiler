@@ -1,0 +1,29 @@
+{
+  "name": "nano-compiler",
+  "version": "1.0.0",
+  "description": "Compile Programing Languages",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoarms/compiler.git"
+  },
+  "keywords": [
+    "Online",
+    "Compiler"
+  ],
+  "author": "Tkraj <nanoarms@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanoarms/compiler/issues"
+  },
+  "homepage": "https://github.com/nanoarms/compiler#readme",
+  "dependencies": {
+    "compilex": "^0.7.4",
+    "express": "^4.17.1",
+    "express1": "^1.0.0"
+  }
+}
